@@ -10,7 +10,7 @@ Microservice (tiny server) for [ytmusicapi](https://github.com/sigma67/ytmusicap
 ## Installation
 
 - Install Python 3.6 or higher with Pip (tested on 3.9.2)
-- Clone this repository: `git clone python-ytmusicapi-server`
+- Clone this repository: `git clone https://github.com/fquirin/python-ytmusicapi-server.git`
 - Set up a virtual environment (recommended) and install packages:
 ```
 cd python-ytmusicapi-server
@@ -27,4 +27,18 @@ pip install ytmusicapi
 
 ## Access the Server
 
-If you used port `30010` like in the example above then open your browser and enter: `http://localhost:30010/search?q=Nevermind&maxResults=3`. Use IP instead of 'localhost' if your server runs on a different machine.
+If you used port `30010` like in the example above then open your browser and enter: `http://localhost:30010/search?q=Nevermind&maxResults=3`. Use IP instead of 'localhost' if your server runs on a different machine.  
+The results you will see are given in the official Youtube Data API v3 format or to be more precise a minimal subset of it:
+```
+{
+    "items": [{
+        "id": {
+            "videoId": "iZ_SwfLlpHo"
+        },
+        "snippet": {
+            "title": "Nevermind",
+            "description": "song"
+        }
+    }, ...]
+}
+```
