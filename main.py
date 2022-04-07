@@ -7,7 +7,7 @@ import os.path
 api = FastAPI()
 api_version = "0.0.1-beta"
 
-auth_file = "persist/headers_auth.json")
+auth_file = "persist/headers_auth.json"
 
 # ---- Objects:
 
@@ -43,12 +43,12 @@ def search(q: str = None, maxResults: int = 3):
     if q is not None:
         # Check for auth file
         if os.path.exists(auth_file):
-            print('Found authentication file > Using YT-Auth ...')
+            print("Found authentication file > Using YT-Auth ...")
             ytmusic = YTMusic(auth_file)
         else:
-            print('No authentication file found > Using YT without Auth')
+            print("No authentication file found > Using YT without Auth")
             ytmusic = YTMusic()
-            # Ref.: https://ytmusicapi.readthedocs.io/en/latest/reference.html
+        # Ref.: https://ytmusicapi.readthedocs.io/en/latest/reference.html
         search_results = ytmusic.search(query = q, limit = maxResults, filter = None)
         if search_results is not None and len(search_results) > 0:
             items = []

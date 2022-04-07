@@ -6,6 +6,9 @@ __pycache__/
 # C extensions
 *.so
 
+# Dummy files for empty folder creation
+!.dummy
+
 # Distribution / packaging
 .Python
 build/
