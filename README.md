@@ -21,6 +21,10 @@ pip install uvicorn
 pip install ytmusicapi
 ```
 
+### Docker Container
+
+A Docker container is available at: [shur3d/ytmusicapi_microservice](https://hub.docker.com/r/shur3d/ytmusicapi_microservice)
+
 ## Run the Server
 
 - `uvicorn main:api --host 0.0.0.0 --port 30010 --log-level info --reload` - [more options](https://www.uvicorn.org/settings/)
